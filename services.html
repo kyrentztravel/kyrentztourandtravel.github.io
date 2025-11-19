@@ -2,78 +2,238 @@
 <html lang="id">
 
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>KylaTravel — Services</title>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Playfair+Display:wght@400;700&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>KylaTravel — Tour Packages (Batam)</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Playfair+Display:wght@400;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-    <nav class="nav" role="navigation">
-        <div class="nav-inner">
-            <div class="brand">
-                <div class="logo">KT</div>
-                <div class="brand-text">
-                    <div class="small-muted">Kyla Travel and Trip</div>
-                    <div class="tag">Explore Batam Island</div>
-                </div>
-            </div>
-            <button class="mobile-toggle" aria-label="Toggle menu">☰</button>
-                <div class="menu" role="menubar" aria-label="Main menu">
-                    <a href="index.html#home">Home</a>
-                    <a href="services.html">Service</a>
-                    <a href="about-us.html">About</a>
-                    <a href="contact-us.html">Contact</a>
-                    <a href="blog.html">Blog</a>
-                  </div>>
-            <div class="actions"><a class="btn btn-outline" href="https://wa.me/628123456789"
-                    target="_blank">WhatsApp</a><a class="btn btn-primary" href="contact-us.html#book">Book Now</a>
-            </div>
+  <!-- NAVBAR (keep as shared across pages) -->
+  <nav class="nav" role="navigation">
+    <div class="nav-inner">
+      <div class="brand">
+        <div class="logo">KT</div>
+        <div class="brand-text">
+          <div class="small-muted">Kyla Travel and Trip</div>
+          <div class="tag">Explore Batam Island</div>
         </div>
-    </nav>
+      </div>
 
-    <main class="section">
-        <h1>Services & Tour Packages</h1>
-        <p class="muted">Detail paket, itinerary, dan tambahan layanan.</p>
+      <button class="mobile-toggle" aria-label="Toggle menu" aria-expanded="false">☰</button>
 
-        <section id="day" class="grid">
-            <article class="card">
-                <img src="asset/images/card2.jpg" alt="Mangrove">
-                <h4>Mangrove & Fireflies</h4>
-                <p class="muted">2 jam — Perahu, guide, snack.</p>
-                <div class="price">IDR 350K / pax</div>
-            </article>
+      <div class="menu" role="menubar" aria-label="Main menu">
+        <a href="index.html#home">Home</a>
+        <a href="services.html" class="active">Services</a>
+        <a href="about-us.html">About</a>
+        <a href="contact-us.html">Contact</a>
+        <a href="blog.html">Blog</a>
+      </div>
 
-            <article class="card">
-                <img src="asset/images/card3.jpg" alt="Full Day">
-                <h4>Full Day Tour</h4>
-                <p class="muted">7–8 jam — transport, makan siang, tiket masuk.</p>
-                <div class="price">IDR 750K / pax</div>
-            </article>
+      <div class="actions">
+        <a class="btn btn-outline" href="https://wa.me/628123456789" target="_blank">WhatsApp</a>
+        <a class="btn btn-primary" href="contact-us.html#book">Book Now</a>
+      </div>
+    </div>
+  </nav>
 
-            <article class="card">
-                <img src="asset/images/card4.jpg" alt="Snorkel">
-                <h4>Snorkeling Trip</h4>
-                <p class="muted">Half-day — perlengkapan & guide.</p>
-                <div class="price">IDR 450K / pax</div>
-            </article>
-        </section>
+  <!-- HERO / BANNER for services -->
+  <header class="page-hero contact-hero" aria-label="Tour packages hero">
+    <div class="page-hero-inner">
+      <h1>Tour Packages — Batam</h1>
+      <p class="hero-sub">Pilih paket wisata populer di Batam — half-day, full-day, private trip, dan banyak lagi. Harga
+        transparan & booking mudah lewat WhatsApp.</p>
+    </div>
+  </header>
 
-        <section id="custom" style="margin-top:18px">
-            <h3>Custom & Private</h3>
-            <p class="muted">Mau rencana privat atau corporate? Hubungi kami lewat WhatsApp.</p>
-            <a class="btn btn-primary" href="https://wa.me/628123456789" target="_blank">Contact WhatsApp</a>
-        </section>
-    </main>
+  <main class="section">
+    <div class="container" style="max-width:1200px;margin:0 auto;padding:0 20px">
 
-    <footer>
-        <div>© Copyright 2025 | Kyla Travel Batam</div>
-    </footer>
+      <!-- Top controls: search / filter / sort -->
+      <div style="display:flex;gap:12px;align-items:center;justify-content:space-between;margin-bottom:18px;flex-wrap:wrap">
+        <div style="display:flex;gap:12px;align-items:center">
+          <input type="text" id="searchInput" placeholder="Cari paket, mis. snorkeling" style="padding:10px 12px;border-radius:8px;border:1px solid rgba(0,0,0,0.06);width:320px">
+          <select id="typeFilter" style="padding:10px 12px;border-radius:8px;border:1px solid rgba(0,0,0,0.06)">
+            <option value="">All types</option>
+            <option value="half-day">Half-day</option>
+            <option value="full-day">Full-day</option>
+            <option value="private">Private</option>
+          </select>
+        </div>
 
-    <script src="js/script.js"></script>
+        <div style="display:flex;gap:10px;align-items:center">
+          <div class="muted">Sort by:</div>
+          <select id="sortBy" style="padding:8px 10px;border-radius:8px;border:1px solid rgba(0,0,0,0.06)">
+            <option value="recommended">Recommended</option>
+            <option value="price-low">Price: Low to High</option>
+            <option value="price-high">Price: High to Low</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Packages grid -->
+      <section id="packagesGrid" class="grid" aria-live="polite">
+
+        <!-- Package 1 -->
+        <article class="card" data-type="half-day" data-price="350000">
+          <img src="assets/images/card-mangrove.jpg" alt="Mangrove & Fireflies Batam">
+          <h4>Mangrove & Fireflies Tour — Batam</h4>
+          <p class="muted">2 jam — Perahu, guide, snack. Nikmati keindahan hutan mangrove dan kunang-kunang di malam hari.</p>
+
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-top:12px">
+            <div class="price">IDR 350K / pax</div>
+            <div style="display:flex;gap:8px">
+              <a class="btn btn-outline" href="services.html#details1" title="Detail">Details</a>
+              <a class="btn btn-primary" href="https://wa.me/628123456789?text=Hallo%20Kyla%20Travel%2C%20saya%20ingin%20pesan%20Mangrove%20Tour" target="_blank">Book</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Package 2 -->
+        <article class="card" data-type="full-day" data-price="750000">
+          <img src="assets/images/card-full-day.jpg" alt="Full Day Batam">
+          <h4>Full Day Island Hopping — Batam</h4>
+          <p class="muted">7–8 jam — Transport, makan siang & tiket masuk. Jelajahi spot terbaik Batam dalam 1 hari penuh.</p>
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-top:12px">
+            <div class="price">IDR 750K / pax</div>
+            <div style="display:flex;gap:8px">
+              <a class="btn btn-outline" href="services.html#details2" title="Detail">Details</a>
+              <a class="btn btn-primary" href="https://wa.me/628123456789?text=Halo%20Kyla%20Travel%2C%20ingin%20pesan%20Full%20Day%20Island%20Hopping" target="_blank">Book</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Package 3 -->
+        <article class="card" data-type="half-day" data-price="450000">
+          <img src="assets/images/card-snorkel.jpg" alt="Snorkeling Batam">
+          <h4>Snorkeling Trip — Batam</h4>
+          <p class="muted">Half-day — Perlengkapan, guide, dan transfer. Spot snorkeling populer dan aman untuk semua level.</p>
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-top:12px">
+            <div class="price">IDR 450K / pax</div>
+            <div style="display:flex;gap:8px">
+              <a class="btn btn-outline" href="services.html#details3" title="Detail">Details</a>
+              <a class="btn btn-primary" href="https://wa.me/628123456789?text=Halo%20Kyla%20Travel%2C%20ingin%20pesan%20Snorkeling%20Trip" target="_blank">Book</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Package 4 -->
+        <article class="card" data-type="private" data-price="1500000">
+          <img src="assets/images/card-private.jpg" alt="Private Trip Batam">
+          <h4>Private Island Experience — Batam</h4>
+          <p class="muted">Custom private trip — Kapal privat, guide, dan itinerary fleksibel untuk kelompok atau pasangan.</p>
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-top:12px">
+            <div class="price">IDR 1.5M / group</div>
+            <div style="display:flex;gap:8px">
+              <a class="btn btn-outline" href="services.html#details4" title="Detail">Details</a>
+              <a class="btn btn-primary" href="https://wa.me/628123456789?text=Halo%20Kyla%20Travel%2C%20ingin%20pesan%20Private%20Island%20Experience" target="_blank">Book</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Package 5 -->
+        <article class="card" data-type="full-day" data-price="500000">
+          <img src="assets/images/card-culture.jpg" alt="Cultural Tour Batam">
+          <h4>Cultural & Heritage Tour — Batam</h4>
+          <p class="muted">Half-day/full-day — Kunjungan ke desa & locus budaya lokal, pengalaman kuliner khas Batam.</p>
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-top:12px">
+            <div class="price">IDR 500K / pax</div>
+            <div style="display:flex;gap:8px">
+              <a class="btn btn-outline" href="services.html#details5" title="Detail">Details</a>
+              <a class="btn btn-primary" href="https://wa.me/628123456789?text=Halo%20Kyla%20Travel%2C%20ingin%20pesan%20Cultural%20Tour" target="_blank">Book</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Package 6 -->
+        <article class="card" data-type="half-day" data-price="320000">
+          <img src="assets/images/card-beach.jpg" alt="Beach Picnic Batam">
+          <h4>Beach Picnic & Sunset — Batam</h4>
+          <p class="muted">Half-day — Santai di pantai, makan siang, dan sunset view yang indah.</p>
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-top:12px">
+            <div class="price">IDR 320K / pax</div>
+            <div style="display:flex;gap:8px">
+              <a class="btn btn-outline" href="services.html#details6" title="Detail">Details</a>
+              <a class="btn btn-primary" href="https://wa.me/628123456789?text=Halo%20Kyla%20Travel%2C%20ingin%20pesan%20Beach%20Picnic" target="_blank">Book</a>
+            </div>
+          </div>
+        </article>
+
+      </section>
+
+      <!-- Pagination or load more -->
+      <div style="display:flex;justify-content:center;margin-top:28px">
+        <button id="loadMore" class="btn btn-outline">Load more</button>
+      </div>
+
+      <!-- Custom / Private CTA -->
+      <section id="custom" style="margin-top:36px;text-align:center">
+        <h3>Custom & Private Trips</h3>
+        <p class="muted">Butuh itinerary khusus? Kami bisa atur private trip untuk keluarga, corporate, atau event spesial.</p>
+        <a class="btn btn-primary" href="https://wa.me/628123456789" target="_blank">Request a Custom Trip</a>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <div style="max-width:1200px;margin:0 auto;padding:18px 20px;color:#ffffff;background:#031826;text-align:center">
+      © Copyright 2025 | Kyla Travel Batam
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+
+  <!-- Optional inline script to add simple front-end filtering (no backend) -->
+  <script>
+    (function(){
+      const search = document.getElementById('searchInput');
+      const typeFilter = document.getElementById('typeFilter');
+      const sortBy = document.getElementById('sortBy');
+      const grid = document.getElementById('packagesGrid');
+      const items = Array.from(grid.querySelectorAll('.card'));
+      const loadMoreBtn = document.getElementById('loadMore');
+
+      // basic filter/search
+      function filterAndSort(){
+        const q = (search.value || '').toLowerCase().trim();
+        const type = typeFilter.value;
+        const sort = sortBy.value;
+
+        let filtered = items.filter(it => {
+          const title = (it.querySelector('h4')?.textContent || '').toLowerCase();
+          const desc = (it.querySelector('p')?.textContent || '').toLowerCase();
+          const matchesQ = q === '' || title.includes(q) || desc.includes(q);
+          const matchesType = !type || it.dataset.type === type;
+          return matchesQ && matchesType;
+        });
+
+        // sort
+        if(sort === 'price-low'){
+          filtered.sort((a,b) => parseInt(a.dataset.price || 0) - parseInt(b.dataset.price || 0));
+        } else if(sort === 'price-high'){
+          filtered.sort((a,b) => parseInt(b.dataset.price || 0) - parseInt(a.dataset.price || 0));
+        }
+
+        // re-render
+        grid.innerHTML = '';
+        filtered.forEach(el => grid.appendChild(el));
+      }
+
+      search?.addEventListener('input', filterAndSort);
+      typeFilter?.addEventListener('change', filterAndSort);
+      sortBy?.addEventListener('change', filterAndSort);
+
+      // simple load more: just hide button (in demo no extra items)
+      loadMoreBtn?.addEventListener('click', () => {
+        loadMoreBtn.textContent = 'No more items';
+        loadMoreBtn.disabled = true;
+      });
+
+    })();
+  </script>
 </body>
 
 </html>
