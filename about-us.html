@@ -1,23 +1,15 @@
 <!doctype html>
 <html lang="id">
-
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>KylaTravel — About Us</title>
-
-  <!-- Google Fonts -->
-  <link
-    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Playfair+Display:wght@400;700&display=swap"
-    rel="stylesheet">
-
-  <!-- External CSS -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
 
-  <!-- NAVBAR (dipertahankan) -->
+  <!-- NAV (pakai navbar yang sama di semua halaman) -->
   <nav class="nav">
     <div class="nav-inner">
       <div class="brand">
@@ -28,7 +20,7 @@
         </div>
       </div>
 
-      <button class="mobile-toggle">☰</button>
+      <button class="mobile-toggle" aria-label="Toggle menu" aria-expanded="false">☰</button>
 
       <div class="menu">
         <a href="index.html#home">Home</a>
@@ -45,89 +37,145 @@
     </div>
   </nav>
 
-  <!-- HERO SECTION -->
-  <header class="page-hero" aria-label="Contact hero">
+  <!-- HERO -->
+  <header class="page-hero about-hero" aria-label="About hero">
+    <div class="overlay"></div>
     <div class="page-hero-inner">
-      <h1>About Us</h1>
-      <p class="hero-sub">
-        Professional & Trusted Travel Partner in Batam</div>
+      <h1>About Kyla Travel</h1>
+      <p class="hero-sub">Your trusted local travel partner in Batam — professional service, friendly guides and curated experiences.</p>
+    </div>
   </header>
 
-
-  <!-- MAIN CONTENT -->
+  <!-- MAIN -->
   <main>
 
-    <!-- ABOUT COMPANY SECTION -->
-    <section class="section about-section">
-      <div class="container about-layout">
+    <!-- QUICK INTRO + STATS -->
+    <section class="section intro-section">
+      <div class="container" style="max-width:1200px;margin:0 auto;padding:0 20px">
+        <div class="intro-grid">
+          <div class="intro-text">
+            <h2>We create memorable Batam experiences</h2>
+            <p>Kyla Travel hadir untuk membantu wisatawan lokal & mancanegara menikmati Batam dengan aman, nyaman, dan penuh cerita.
+              Kami menyediakan paket wisata, private trip, transport, serta layanan booking yang cepat via WhatsApp.</p>
+            <p>Tim kami berpengalaman dalam hospitality, guiding, dan logistics — fokus pada kepuasan tamu dan detail perjalanan.</p>
+          </div>
 
-        <div class="about-text">
-          <h2>Welcome to Kyla Travel</h2>
-          <p>
-            Kyla Travel adalah penyedia layanan perjalanan dan tur lokal di Pulau Batam.
-            Kami berkomitmen memberikan pengalaman terbaik bagi setiap tamu melalui pelayanan profesional,
-            armada yang nyaman, serta tour guide berpengalaman.
-          </p>
-
-          <p>
-            Sejak awal berdiri, kami selalu mengutamakan keamanan, transparansi harga, dan pengalaman wisata
-            yang berkualitas.
-          </p>
+          <div class="stats-cards">
+            <div class="stat-card">
+              <div class="stat-big">2k+</div>
+              <div class="stat-label">Travellers</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-big">4.8</div>
+              <div class="stat-label">Average Rating</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-big">50+</div>
+              <div class="stat-label">Destinations</div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- WHY CHOOSE US -->
-    <section class="section why-us">
-      <h2 class="center">Why Choose Kyla Travel?</h2>
+    <!-- WHY US (cards) -->
+    <section class="section why-us-cards">
+      <div class="container" style="max-width:1200px;margin:0 auto;padding:0 20px">
+        <h2 class="center">Why choose Kyla Travel?</h2>
+        <div class="why-grid">
+          <article class="why-card">
+            <div class="icon-circle">⭐</div>
+            <h3>Trusted & Experienced</h3>
+            <p>Guide berpengalaman & tim support yang siap membantu 24/7 saat perjalananmu.</p>
+          </article>
 
-      <div class="why-grid">
+          <article class="why-card">
+            <div class="icon-circle">🛡️</div>
+            <h3>Safety First</h3>
+            <p>Kami prioritaskan keselamatan dengan armada terawat dan protokol lapangan.</p>
+          </article>
 
-        <div class="why-card">
-          <div class="icon-circle">⭐</div>
-          <h3>Professional Service</h3>
-          <p>Panduan wisata berpengalaman & tim yang ramah.</p>
+          <article class="why-card">
+            <div class="icon-circle">🧭</div>
+            <h3>Local Knowledge</h3>
+            <p>Tim lokal yang tahu spot terbaik, kuliner otentik, dan waktu kunjungan ideal.</p>
+          </article>
         </div>
-
-        <div class="why-card">
-          <div class="icon-circle">💰</div>
-          <h3>Best Price</h3>
-          <p>Harga jujur & transparan tanpa biaya tersembunyi.</p>
-        </div>
-
-        <div class="why-card">
-          <div class="icon-circle">🛵</div>
-          <h3>Comfort & Safety</h3>
-          <p>Armada bersih, aman, dan selalu siap untuk perjalanan.</p>
-        </div>
-
       </div>
     </section>
 
-    <!-- OUR VISION -->
-    <section class="section vision">
-      <div class="container vision-box">
-        <h2>Our Vision & Values</h2>
+    <!-- TEAM (cards with images) -->
+    <section class="section team-section">
+      <div class="container" style="max-width:1200px;margin:0 auto;padding:0 20px">
+        <h2 class="center">Our Team</h2>
 
-        <p>Kyla Travel hadir untuk menjadi pilihan utama wisatawan yang ingin menjelajahi Pulau Batam dengan nyaman,
-          aman, dan berkualitas.</p>
+        <div class="team-grid">
+          <article class="team-card">
+            <div class="team-photo" style="background-image:url('../assets/images/team-ari.jpg')" role="img" aria-label="Ari"></div>
+            <div class="team-body">
+              <h4>Ari — Founder</h4>
+              <p class="muted">Ex-hospitality. Passionate about local tourism and guest experience.</p>
+              <div class="tag-row"><span class="pill">Founder</span><span class="pill">English</span></div>
+            </div>
+          </article>
 
-        <ul class="vision-list">
-          <li>✔ Memberikan layanan wisata terbaik</li>
-          <li>✔ Mempromosikan destinasi lokal</li>
-          <li>✔ Menyediakan tur fleksibel sesuai kebutuhan</li>
-          <li>✔ Menjaga kenyamanan & keamanan setiap tamu</li>
-        </ul>
+          <article class="team-card">
+            <div class="team-photo" style="background-image:url('../assets/images/team-sari.jpg')" role="img" aria-label="Sari"></div>
+            <div class="team-body">
+              <h4>Sari — Operations</h4>
+              <p class="muted">Handles bookings & logistics to keep schedules smooth for travelers.</p>
+              <div class="tag-row"><span class="pill">Operations</span><span class="pill">Support</span></div>
+            </div>
+          </article>
+
+          <article class="team-card">
+            <div class="team-photo" style="background-image:url('../assets/images/team-dito.jpg')" role="img" aria-label="Dito"></div>
+            <div class="team-body">
+              <h4>Dito — Guide</h4>
+              <p class="muted">Bilingual guide and dive certified — great with families and groups.</p>
+              <div class="tag-row"><span class="pill">Guide</span><span class="pill">Dive Certified</span></div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- VISION & VALUES -->
+    <section class="section vision-section">
+      <div class="container" style="max-width:1000px;margin:0 auto;padding:0 20px;text-align:center">
+        <h2>Our Vision</h2>
+        <p>Menjadi partner wisata terpercaya di Batam yang mengedepankan kenyamanan, pengalaman lokal, dan keberlanjutan.</p>
+
+        <div class="vision-grid">
+          <div class="vision-card">
+            <h4>Customer-first</h4>
+            <p>Kepuasan tamu adalah prioritas utama.</p>
+          </div>
+          <div class="vision-card">
+            <h4>Responsible Travel</h4>
+            <p>Mendukung pelestarian destinasi dan komunitas lokal.</p>
+          </div>
+          <div class="vision-card">
+            <h4>Quality Experience</h4>
+            <p>Standar tinggi dalam layanan dan fasilitas.</p>
+          </div>
+        </div>
+
+        <div style="margin-top:28px">
+          <a class="btn btn-primary large" href="contact-us.html#book">Book a Trip</a>
+        </div>
       </div>
     </section>
 
   </main>
 
-  <footer>
-    <div>© Copyright 2025 | Kyla Travel Batam</div>
+  <footer class="site-footer">
+    <div class="wrap">
+      <div>© Copyright 2025 | Kyla Travel Batam</div>
+      <div class="muted">Follow: Facebook • TikTok • Youtube • Instagram</div>
+    </div>
   </footer>
 
   <script src="js/script.js"></script>
 </body>
-
 </html>
